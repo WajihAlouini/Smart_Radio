@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GuestModule</class>
+ <widget class="QMainWindow" name="GuestModule">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Guest Engagement Hub</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1160</width>
+      <height>780</height>
+     </rect>
+    </property>
+    <!-- Main Hub -->
+    <widget class="QWidget" name="tab_hub">
+      <attribute name="title"><string>🤝 ENGAGEMENT HUB</string></attribute>
+      <!-- List Area (Left) -->
+      <widget class="QGroupBox" name="groupBox_list">
+       <property name="geometry"><rect><x>10</x><y>10</y><width>750</width><height>730</height></rect></property>
+       <property name="title"><string>GUEST BOOKING LOG</string></property>
+       <widget class="QTableView" name="tab_invite">
+        <property name="geometry"><rect><x>10</x><y>100</y><width>730</width><height>620</height></rect></property>
+       </widget>
+       <widget class="QLineEdit" name="invite_rechercher_id">
+        <property name="geometry"><rect><x>10</x><y>40</y><width>250</width><height>40</height></rect></property>
+        <property name="placeholderText"><string>Filter guests...</string></property>
+       </widget>
+       <widget class="QPushButton" name="pb_invite_triASC">
+        <property name="geometry"><rect><x>270</x><y>40</y><width>100</width><height>40</height></rect></property>
+        <property name="text"><string>SORT ASC</string></property>
+       </widget>
+       <widget class="QPushButton" name="pb_invite_triDSC">
+        <property name="geometry"><rect><x>380</x><y>40</y><width>100</width><height>40</height></rect></property>
+        <property name="text"><string>SORT DESC</string></property>
+       </widget>
+       <widget class="QPushButton" name="invite_pdf_button">
+        <property name="geometry"><rect><x>490</x><y>40</y><width>100</width><height>40</height></rect></property>
+        <property name="text"><string>PDF</string></property>
+       </widget>
+      </widget>
+      <!-- Form Area (Right) -->
+      <widget class="QGroupBox" name="groupBox_form">
+       <property name="geometry"><rect><x>770</x><y>10</y><width>370</width><height>730</height></rect></property>
+       <property name="title"><string>GUEST BOOKING DETAILS</string></property>
+       <widget class="QLabel" name="label_9"><property name="geometry"><rect><x>20</x><y>50</y><width>330</width><height>20</height></rect></property><property name="text"><string>BOOKING ID (AUTO)</string></property></widget>
+       <widget class="QLineEdit" name="invite_ajout_id"><property name="geometry"><rect><x>20</x><y>75</y><width>330</width><height>40</height></rect></property></widget>
+       
+       <widget class="QLabel" name="label_10"><property name="geometry"><rect><x>20</x><y>125</y><width>330</width><height>20</height></rect></property><property name="text"><string>REPETITIONS / FREQUENCY</string></property></widget>
+       <widget class="QSpinBox" name="invite_ajout_rep"><property name="geometry"><rect><x>20</x><y>150</y><width>330</width><height>40</height></rect></property></widget>
+       
+       <widget class="QLabel" name="label_11"><property name="geometry"><rect><x>20</x><y>200</y><width>330</width><height>20</height></rect></property><property name="text"><string>SCHEDULED VISIT TIME</string></property></widget>
+       <widget class="QDateTimeEdit" name="invite_ajout_date"><property name="geometry"><rect><x>20</x><y>225</y><width>330</width><height>40</height></rect></property><property name="calendarPopup"><bool>true</bool></property></widget>
+       
+       <widget class="QPushButton" name="invite_ajout_button">
+        <property name="geometry"><rect><x>20</x><y>350</y><width>330</width><height>50</height></rect></property>
+        <property name="text"><string>➕ CONFIRM NEW BOOKING</string></property>
+        <property name="toolTip"><string>Create a new visitor pass in the system</string></property>
+       </widget>
+       <widget class="QPushButton" name="invite_modifier_button">
+        <property name="geometry"><rect><x>20</x><y>410</y><width>330</width><height>50</height></rect></property>
+        <property name="text"><string>💾 SAVE MODIFICATIONS</string></property>
+        <property name="toolTip"><string>Update changes to an existing guest booking</string></property>
+       </widget>
+       <widget class="QPushButton" name="invite_supprime_button">
+        <property name="geometry"><rect><x>20</x><y>470</y><width>330</width><height>50</height></rect></property>
+        <property name="text"><string>🗑️ CANCEL BOOKING</string></property>
+        <property name="toolTip"><string>Permanently remove this visitor from the schedule</string></property>
+       </widget>
+       <widget class="QPushButton" name="btn_clear_hub">
+        <property name="geometry"><rect><x>20</x><y>530</y><width>330</width><height>40</height></rect></property>
+        <property name="text"><string>🔄 RESET WORKSPACE</string></property>
+       </widget>
+
+       <!-- Stats Quick View -->
+       <widget class="QLabel" name="invite_stat_label">
+        <property name="geometry"><rect><x>10</x><y>580</y><width>350</width><height>140</height></rect></property>
+        <property name="text"><string></string></property>
+       </widget>
+      </widget>
+    </widget>
+
+    <widget class="QWidget" name="tab_mic">
+        <attribute name="title"><string>🎙️ MIC CONTROL</string></attribute>
+        <widget class="QLabel" name="mic_status_label">
+            <property name="geometry"><rect><x>50</x><y>50</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>MICROPHONE STATUS</string></property>
+        </widget>
+        <widget class="QLabel" name="mic_status_value">
+            <property name="geometry"><rect><x>250</x><y>50</y><width>300</width><height>30</height></rect></property>
+            <property name="text"><string>Ready</string></property>
+        </widget>
+        <widget class="QLabel" name="mic_volume_label">
+            <property name="geometry"><rect><x>50</x><y>120</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>INPUT VOLUME</string></property>
+        </widget>
+        <widget class="QSlider" name="mic_volume_slider">
+            <property name="geometry"><rect><x>250</x><y>120</y><width>400</width><height>30</height></rect></property>
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="minimum"><number>0</number></property>
+            <property name="maximum"><number>100</number></property>
+            <property name="value"><number>75</number></property>
+        </widget>
+        <widget class="QLabel" name="mic_volume_value">
+             <property name="geometry"><rect><x>660</x><y>120</y><width>50</width><height>30</height></rect></property>
+             <property name="text"><string>75%</string></property>
+        </widget>
+        <widget class="QLabel" name="mic_device_label">
+            <property name="geometry"><rect><x>50</x><y>190</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>INPUT DEVICE</string></property>
+        </widget>
+        <widget class="QComboBox" name="mic_device_combo">
+            <property name="geometry"><rect><x>250</x><y>190</y><width>400</width><height>35</height></rect></property>
+        </widget>
+        <widget class="QPushButton" name="mic_mute_button">
+            <property name="geometry"><rect><x>50</x><y>270</y><width>200</width><height>50</height></rect></property>
+            <property name="text"><string>🔇 MUTE</string></property>
+        </widget>
+        <widget class="QPushButton" name="mic_test_button">
+            <property name="geometry"><rect><x>270</x><y>270</y><width>200</width><height>50</height></rect></property>
+            <property name="text"><string>🎤 CHECK SIGNAL</string></property>
+        </widget>
+        <widget class="QPushButton" name="mic_refresh_button">
+            <property name="geometry"><rect><x>490</x><y>270</y><width>200</width><height>50</height></rect></property>
+            <property name="text"><string>🔄 REFRESH DEVICES</string></property>
+        </widget>
+        <widget class="QProgressBar" name="mic_level_indicator">
+            <property name="geometry"><rect><x>50</x><y>350</y><width>600</width><height>30</height></rect></property>
+            <property name="minimum"><number>0</number></property>
+            <property name="maximum"><number>100</number></property>
+            <property name="value"><number>0</number></property>
+            <property name="textVisible"><bool>true</bool></property>
+        </widget>
+        <widget class="QLabel" name="mic_level_label">
+            <property name="geometry"><rect><x>50</x><y>320</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>INPUT LEVEL</string></property>
+        </widget>
+    </widget>
+
+    <widget class="QWidget" name="tab_game">
+        <attribute name="title"><string>🎮 STUDIO GAME</string></attribute>
+        <widget class="QLabel" name="label_47">
+            <property name="geometry"><rect><x>50</x><y>80</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>STUDIO QUESTION</string></property>
+        </widget>
+        <widget class="QLabel" name="invite_jeu_question">
+            <property name="geometry"><rect><x>50</x><y>120</y><width>1060</width><height>80</height></rect></property>
+        </widget>
+        <widget class="QLabel" name="label_49">
+            <property name="geometry"><rect><x>50</x><y>230</y><width>200</width><height>30</height></rect></property>
+            <property name="text"><string>YOUR RESPONSE</string></property>
+        </widget>
+        <widget class="QLineEdit" name="invite_jeu_reponse">
+            <property name="geometry"><rect><x>50</x><y>270</y><width>600</width><height>40</height></rect></property>
+        </widget>
+        <widget class="QPushButton" name="invite_jeu_generate">
+            <property name="geometry"><rect><x>50</x><y>340</y><width>280</width><height>50</height></rect></property>
+            <property name="text"><string>🎲 RANDOM QUESTION</string></property>
+        </widget>
+        <widget class="QPushButton" name="invite_jeu_reponse_2">
+            <property name="geometry"><rect><x>350</x><y>340</y><width>280</width><height>50</height></rect></property>
+            <property name="text"><string>🚀 SUBMIT ANSWER</string></property>
+        </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/><widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

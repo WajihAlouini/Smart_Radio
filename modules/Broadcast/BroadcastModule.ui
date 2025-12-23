@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BroadcastModule</class>
+ <widget class="QMainWindow" name="BroadcastModule">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Broadcast Operations Management</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1160</width>
+      <height>780</height>
+     </rect>
+    </property>
+    <!-- Individual tabs with English names -->
+    <widget class="QWidget" name="tab_ops">
+     <attribute name="title"><string>📡 BROADCAST HUB</string></attribute>
+     <widget class="QGroupBox" name="groupBox_list">
+      <property name="geometry"><rect><x>10</x><y>10</y><width>750</width><height>730</height></rect></property>
+      <property name="title"><string>LIVE AIR LOG</string></property>
+      <widget class="QTableView" name="tableView">
+       <property name="geometry"><rect><x>10</x><y>100</y><width>730</width><height>620</height></rect></property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Recherche">
+       <property name="geometry"><rect><x>10</x><y>40</y><width>250</width><height>40</height></rect></property>
+       <property name="placeholderText"><string>Filter shows...</string></property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_Chercher">
+       <property name="geometry"><rect><x>270</x><y>40</y><width>100</width><height>40</height></rect></property>
+       <property name="text"><string>FIND</string></property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry"><rect><x>380</x><y>40</y><width>100</width><height>40</height></rect></property>
+       <property name="text"><string>PDF</string></property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_show_details">
+      <property name="geometry"><rect><x>770</x><y>10</y><width>370</width><height>730</height></rect></property>
+      <property name="title"><string>SHOW CONFIGURATION</string></property>
+      
+      <widget class="QLabel" name="label"><property name="geometry"><rect><x>20</x><y>50</y><width>330</width><height>20</height></rect></property><property name="text"><string>UNIQUE SHOW ID</string></property></widget>
+      <widget class="QLineEdit" name="lineEdit_ID"><property name="geometry"><rect><x>20</x><y>75</y><width>330</width><height>40</height></rect></property></widget>
+      
+      <widget class="QLabel" name="label_2"><property name="geometry"><rect><x>20</x><y>125</y><width>330</width><height>20</height></rect></property><property name="text"><string>SHOW TITLE</string></property></widget>
+      <widget class="QLineEdit" name="lineEdit_Nom"><property name="geometry"><rect><x>20</x><y>150</y><width>330</width><height>40</height></rect></property></widget>
+      
+      <widget class="QLabel" name="label_3"><property name="geometry"><rect><x>20</x><y>200</y><width>160</width><height>20</height></rect></property><property name="text"><string>AIR TIME</string></property></widget>
+      <widget class="QDateTimeEdit" name="dateTimeEdit_Heure"><property name="geometry"><rect><x>20</x><y>225</y><width>160</width><height>40</height></rect></property><property name="displayFormat"><string>yyyy-MM-dd HH:mm</string></property><property name="calendarPopup"><bool>true</bool></property></widget>
+      
+      <widget class="QLabel" name="label_17"><property name="geometry"><rect><x>190</x><y>200</y><width>160</width><height>20</height></rect></property><property name="text"><string>DURATION (MIN)</string></property></widget>
+      <widget class="QLineEdit" name="lineEdit_Duree"><property name="geometry"><rect><x>190</x><y>225</y><width>160</width><height>40</height></rect></property></widget>
+      
+      <widget class="QLabel" name="label_6"><property name="geometry"><rect><x>20</x><y>275</y><width>330</width><height>20</height></rect></property><property name="text"><string>SHOW CATEGORY</string></property></widget>
+      <widget class="QLineEdit" name="lineEdit_Type"><property name="geometry"><rect><x>20</x><y>300</y><width>330</width><height>40</height></rect></property></widget>
+      
+      <widget class="QLabel" name="label_20"><property name="geometry"><rect><x>20</x><y>350</y><width>330</width><height>20</height></rect></property><property name="text"><string>ESTIMATED REACH / VIEWERS</string></property></widget>
+      <widget class="QLineEdit" name="lineEdit_NBView"><property name="geometry"><rect><x>20</x><y>375</y><width>330</width><height>40</height></rect></property></widget>
+      
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry"><rect><x>20</x><y>450</y><width>330</width><height>50</height></rect></property>
+       <property name="text"><string>➕ SCHEDULE NEW SHOW</string></property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry"><rect><x>20</x><y>510</y><width>330</width><height>50</height></rect></property>
+       <property name="text"><string>💾 SAVE MODIFICATIONS</string></property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_Supprimer">
+       <property name="geometry"><rect><x>20</x><y>570</y><width>330</width><height>50</height></rect></property>
+       <property name="text"><string>🗑️ CANCEL BROADCAST</string></property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry"><rect><x>20</x><y>630</y><width>330</width><height>40</height></rect></property>
+       <property name="text"><string>CLEAR WORKSPACE</string></property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_calendar"><attribute name="title"><string>🗓️ CALENDAR</string></attribute>
+        <widget class="QCalendarWidget" name="calendarWidget"><property name="geometry"><rect><x>10</x><y>10</y><width>1140</width><height>300</height></rect></property></widget>
+        <widget class="QLineEdit" name="lineEdit_Calendrier"><property name="geometry"><rect><x>10</x><y>320</y><width>200</width><height>40</height></rect></property></widget>
+        <widget class="QTableView" name="tableView_Calendar"><property name="geometry"><rect><x>10</x><y>370</y><width>1140</width><height>350</height></rect></property></widget>
+    </widget>
+    <widget class="QWidget" name="tab_hist"><attribute name="title"><string>📜 HISTORY</string></attribute>
+        <widget class="QTableView" name="tableView_hist"><property name="geometry"><rect><x>10</x><y>10</y><width>1140</width><height>650</height></rect></property></widget>
+        <widget class="QPushButton" name="pushButton_6"><property name="geometry"><rect><x>10</x><y>670</y><width>200</width><height>40</height></rect></property></widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/><widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <connections/>
+</ui>

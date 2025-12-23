@@ -1,0 +1,20 @@
+# C++ and Qt
+release/
+debug/
+*.o
+*.obj
+*.moc
+*.qrc.cpp
+moc_*.cpp
+ui_*.h
+*.bak
+*.orig
+*.user
+*.user.*
+Makefile*
+SmartRadio.exe
+.qtc_clangd/
+
+# OS files
+Thumbs.db
+.DS_Store

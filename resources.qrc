@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/about.png</file>
+        <file>resources/copy.png</file>
+        <file>resources/cut.jpg</file>
+        <file>resources/new.png</file>
+        <file>resources/open.png</file>
+        <file>resources/paste.png</file>
+        <file>resources/redo.png</file>
+        <file>resources/save_as.png</file>
+        <file>resources/save.png</file>
+        <file>resources/undo.png</file>
+        <file>resources/icons/AppIcon.png</file>
+    </qresource>
+</RCC>
